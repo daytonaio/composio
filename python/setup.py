@@ -69,6 +69,10 @@ flyio_workspace_requirements = [
     "requests_toolbelt",  # FlyIO workspace
 ]
 
+daytona_workspace_requirements = [
+    "daytona-sdk",  # Daytona workspace (TODO: min version)
+]
+
 tools_requirements = [
     "pygments",
     "pathspec",
@@ -84,6 +88,7 @@ all_requirements = (
     + e2b_workspace_requirements
     + docker_workspace_requirements
     + flyio_workspace_requirements
+    + daytona_workspace_requirements
     + tools_requirements
 )
 
@@ -115,6 +120,7 @@ setup(
         "e2b": e2b_workspace_requirements,
         "flyio": flyio_workspace_requirements,
         "docker": docker_workspace_requirements,
+        "daytona": daytona_workspace_requirements,
     },
     include_package_data=True,
     package_data={
