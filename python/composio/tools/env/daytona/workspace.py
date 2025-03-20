@@ -4,8 +4,6 @@ import os
 import typing as t
 from dataclasses import dataclass
 
-from daytona_sdk import DaytonaConfig
-
 from composio.exceptions import ComposioSDKError
 from composio.tools.env.base import RemoteWorkspace, WorkspaceConfigType
 
@@ -13,6 +11,7 @@ from composio.tools.env.base import RemoteWorkspace, WorkspaceConfigType
 try:
     from daytona_sdk import (
         Daytona,
+        DaytonaConfig,
         CodeLanguage as SandboxCodeLanguage,
         SandboxTargetRegion as DaytonaSandboxTargetRegion,
         SandboxResources as DaytonaSandboxResources,
