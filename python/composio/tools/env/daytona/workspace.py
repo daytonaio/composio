@@ -77,11 +77,11 @@ class DaytonaWorkspace(RemoteWorkspace):
         super().__init__(config=config)
 
         self.daytona = Daytona(config=DaytonaConfig(
-            api_key=config.api_key, # type: ignore (will be fixed in next version of daytona-sdk)
+            api_key=config.api_key,
             server_url="https://app.daytona.io/api",
          ))
         self.daytona_create_sandbox_params = CreateDaytonaSandboxParams(
-            language=config.language, # type: ignore (will be fixed in next version of daytona-sdk)
+            language=config.language,
             id=config.id,
             name=config.name,
             image=config.image,
@@ -91,6 +91,7 @@ class DaytonaWorkspace(RemoteWorkspace):
             target=config.target,
             resources=config.resources,
             auto_stop_interval=config.auto_stop_interval,
+            timeout=None
         )
 
 
